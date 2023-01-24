@@ -1,8 +1,7 @@
 const os = require('os');
 const { exec } = require('child_process');
 const Discord = require('discord.js');
-const package = require('../../package.json');
-
+const { Client, GatewayIntentBits, ActivityType } = require('discord.js');
 
 const color = { white: '\x1B[0m', cyan: '\x1B[36m' };
 
@@ -13,7 +12,6 @@ module.exports = async (client) => {
         os_version: await OSversion(),
         node_version: process.version,
         discord_version: `v${Discord.version}`,
-        bot_version: `v${package.version}`,
         cpu: `${os.cpus()[0].model}`
     };
 
