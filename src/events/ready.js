@@ -38,7 +38,10 @@ module.exports = async (client) => {
         }
     }));
 
-    client.user.setActivity(client.config.playing);
+      client.user.setPresence({
+  activities: [{ name: client.config.playing, type: ActivityType.Listening }],
+  status: 'idle',
+});
     console.log(`>>> Logged in as ${client.user.username}`);
 };
 
