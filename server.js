@@ -38,7 +38,7 @@ let client = new Client({
     disableMentions: 'everyone',
 });
 client.config = {
-    playing: 'Coffe Time - 1play',
+    playing: 'Coffee Time - 1play',
     defaultVolume: 50,
     maxVolume: 100,
     autoLeave: true,
